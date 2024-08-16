@@ -16,5 +16,5 @@ function myDictionary()  //Function that creates a dictionary and attempts to di
     };
 
     delete Animal.Species;
-    document.getElementById("Dictionary").innerHTML = Animal.Species;
+    document.getElementById("Dictionary").innerHTML = "Species:  " + Animal.Species + " Age:  " + Animal.Age + " Breed:  " + Animal.Breed + " Color:  " + Animal.Color;
 }
