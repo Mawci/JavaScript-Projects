@@ -5,3 +5,7 @@ var num = 3 + 3;//declaring and assigning a variable num that holds the result o
 document.write(num + " ");//calling the document.write function to display to the value the variable is holding from the expression
 
 document.write(Sent1 + Sent2);//calling the document.write fucntion to display and example of combing 2 strings
+
+function displayDate() {
+    document.getElementById("test").innerHTML = Date();
+}
