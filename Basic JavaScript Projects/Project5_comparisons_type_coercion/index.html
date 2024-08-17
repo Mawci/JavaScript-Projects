@@ -6,7 +6,30 @@
 </head>
 
 <body>
-    <p id="Type_Of" onmouseover="determine()">Move over me!</p>
+    <p onclick="determine()">Click me LAST</p>
+            <!--infinity, NaN, and -infinity-->
+    <p id="test" onclick="display()">Click me to see not a number</p>
+    <p id="test2" onclick="display2()">Click me to see true</p>
+    <p id="test3" onclick="display3()">Click me to see false</p>
+    <p id="test4" onclick="display4()">Click me to see infinity</p>
+    <p id="test5" onclick="display5()">Click me to see negative infinity</p>
+             <!-- writing to the console and equality operations-->
+    <p id="test6" onclick="display6(10, 5)">Click here to see if 10 is greater than 5!</p>
+    <p id="test7" onclick="display7(10, 5)">Click here to print the result of 10 + 5 to the console!</p>
+    <p id="test8" onclick="display8(10, 5)">Click here to print the result of 10 less than 5 to the console!</p>
+    <p id="test9" onclick="display9(10, 5)">Click here to see if 10 is equal to 5!</p>
+    <p id="test10" onclick="display10(10, 10)">Click here to see if 10 is equal to 10</p>
+            <!-- === operators-->
+    <p id="test11" onclick="display11(10, 10)">Click here to see if 10 is equal and the same type as 10</p>
+    <p id="test12" onclick="display12(10, '11')">Click here to see if 10 is equal and the same type as "11"</p>
+    <p id="test13" onclick="display13(10, '10')">Click here to see if 10 is equal and the same type as "10"</p>
+    <p id="test14" onclick="display14(10, 5)">Click here to see if 10 is equal and the same type as 5</p>
+            <!--AND OR NOT operators-->
+    <p id="test15" onclick="display15(10, 5, 5, 10)">Click here to see if 10 is greater than 5 and 5 greater than 10</p>
+    <p id="test16" onclick="display16(10, 5, 10, 5)">Click here to see if 10 is greater than 5 and 10 is greater than 5</p>
+    <p id="test17" onclick="display17(10, 5, 5, 10)">Click here to see if 10 is greater than 5 or 5 greater than 10</p>
+    <p id="test18" onclick="display18(5, 10, 5, 10)">Click here to see if 5 is greater than 10 or 5 is greater than 10</p>
+    <p id="test19" onclick="display19(10, 5)">Click here to see opposite of 10 greater than 5</p>
 </body>
 
 </html>
