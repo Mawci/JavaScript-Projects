@@ -4,6 +4,8 @@ function getReceipt() {
     var runningTotal = 0;
     var sizeTotal = 0;
     var sizeArray = document.getElementsByClassName("size");
+
+    //loop through and collect any element(pizza) that was checked
     for (var i = 0; i < sizeArray.length; i++)
     {
         if (sizeArray[i].checked) {
@@ -12,6 +14,7 @@ function getReceipt() {
         }
     }
 
+    //determine what the check items were and set the total based on the pizza size
     if (selectedSize === "Personal Pizza") {
         sizeTotal = 6;
     } else if (selectedSize === "Small Pizza") {
@@ -23,7 +26,7 @@ function getReceipt() {
     } else if (selectedSize === "Extra Large Pizza") {
         sizeTotal = 16;
     }
-    runningTotal = sizeTotal;
+    runningTotal = sizeTotal; //update the overall total with the pizza price
     console.log(selectedSize + " = $" + sizeTotal + ".00");
     console.log("size text1: " + text1);
     console.log("subtotal: $" + runningTotal + ".00");
@@ -31,6 +34,7 @@ function getReceipt() {
     getTopping(runningTotal, text1);
 };
 
+//Take the running total and starting string for the order and append them as items are checked on the menu
 function getTopping(runningTotal, text1) {
     var toppingTotal = 0;
     var selectedTopping = [];
@@ -43,12 +47,14 @@ function getTopping(runningTotal, text1) {
             text1 = text1 + toppingArray[j].value + "<br>";
         }
     }
-    var toppingCount = selectedTopping.length;
+    var toppingCount = selectedTopping.length; //check the length of toppings, to see if there were any selected, if so, give one for free
     if (toppingCount > 1) {
         toppingTotal = (toppingCount - 1);
     } else {
         toppingTotal = 0;
     }
+
+    //calculate total and output them to the screen & console
     runningTotal = (runningTotal + toppingTotal);
     console.log("total selected topping items: " + toppingCount);
     console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
