@@ -36,9 +36,9 @@ $(document).ready(function () {
         //one after the other when the user's mouse leaves the 
         //div area witht the classic cars ID
         mouseleave: function () {
-            $("titleOne").hide(2000);
-            $("titleTwo").hide(1500);
-            $("titleThree").hide(1000);
+            $("#titleOne").hide(2000);
+            $("#titleTwo").hide(1500);
+            $("#titleThree").hide(1000);
         }
     });
 
